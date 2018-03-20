@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @beet.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @beet.body %>
+</p>
+
+<%= link_to 'Edit', edit_beet_path(@beet) %> |
+<%= link_to 'Back', beets_path %>

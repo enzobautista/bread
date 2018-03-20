@@ -1,0 +1,27 @@
+<%= form_with(model: beet, local: true) do |form| %>
+  <% if beet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beet.errors.count, "error") %> prohibited this beet from being saved:</h2>
+
+      <ul>
+      <% beet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :beet_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :beet_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

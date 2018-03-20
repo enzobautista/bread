@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Beets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beets.each do |beet| %>
+      <tr>
+        <td><%= beet.title %></td>
+        <td><%= beet.body %></td>
+        <td><%= link_to 'Show', beet %></td>
+        <td><%= link_to 'Edit', edit_beet_path(beet) %></td>
+        <td><%= link_to 'Destroy', beet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beet', new_beet_path %>

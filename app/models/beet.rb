@@ -1,0 +1,2 @@
+class Beet < ApplicationRecord
+end
